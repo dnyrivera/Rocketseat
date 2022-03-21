@@ -1,0 +1,348 @@
+<div class="wrapper">
+  <div class="header">
+    <div class="shipping-address">
+      <strong><p class="to-uppercase">Ship To</p></strong>
+      <hr>
+      <div class="ship-to to-uppercase">
+        <br>
+        {% if shipping_address != blank %} {{ shipping_address.name }} {% if
+        shipping_address.company != blank %}
+        <br />
+        {{ shipping_address.company }} {% endif %}
+        <br />
+        {{ shipping_address.address1 }} {% if shipping_address.address2 != blank %}
+        <br />{{ shipping_address.address2 }} {% endif %} {% if shipping_address.city_province_zip
+        != blank %} <br />{{ shipping_address.city_province_zip }} {% endif %}
+        <br />
+        {{ shipping_address.country }} {% if shipping_address.phone != blank %}
+        <br />{{ shipping_address.phone }} {% endif %} {% else %} No shipping address {% endif %}
+      </div>
+    </div>
+    <div class="order-title">
+        <p class="header-title"></p><br>
+          <hr>
+          <strong><span class="ship-order"> &nbsp;{{ order.order_number }}</span></strong> <br>
+          <span class="align-right">&nbsp;&nbsp;&nbsp;&nbsp; {{ order.created_at | date: "%B %e, %Y" }}</span>
+      </p>
+    </div>
+    <div class="total-list">
+      <strong><caption class="header-title to-uppercase">VOLUMES</caption></strong><hr>
+      <br>
+      <table>
+        <tr class="tabela-tipos">
+          <th>SECO</th>
+          <th>&nbsp;</th>
+        </tr>
+        <tr class="tabela-tipos">
+          <th>FREEZER</th>
+          <th>&nbsp;</th>
+        </tr>
+        <tr class="tabela-tipos">
+          <th>GELADEIRA</th>
+          <th>&nbsp;</th>
+        </tr>
+        <tr class="tabela-tipos">
+          <th></th>
+          <th>&nbsp;</th>
+        </tr>
+        <tr class="tabela-tipos">
+          <th></th>
+          <th>&nbsp;</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <div class="order-container">
+    <table class="content-table ">
+      <thead class="to-uppercase">
+        <tr>
+          <th>Items</th>
+          <th>Quantity</th>
+          <th>Type</th>
+          <th>Sep.</th>
+          <th>Conf.</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for line_item in line_items_in_shipment %}
+        <tr>
+          <td>
+            <div class="itens-content">
+              <div>
+                <!-- {% if line_item.image != blank %} {{ line_item.image | img_url: '58x58' | img_tag }}
+                {% endif %} -->
+              </div>
+              <div class="flex-line-item-description " style="display: flex; align-items: center">
+                <p style="height: 100%">
+                  <span class="line-item-description-line to-uppercase"> {{ line_item.title }} </span>
+                  {% if line_item.variant_title != blank %}
+                    <span class="line-item-description-line-var"> {{ line_item.variant_title }} </span>
+                  {% endif %} 
+                  {% if line_item.sku != blank %}
+                    <span class="line-item-description-line-sku"> {{ line_item.sku }} </span>
+                  {% endif %}
+                </p>
+              </div>
+            </div>
+          </td>
+          <td>
+              {% if line_item.shipping_quantity > 1 %}
+                <p class="item-qtd-maior">{{ line_item.shipping_quantity }}</p>
+            {% else %}
+                <p class="item-qtd">{{ line_item.shipping_quantity }}</p>
+              {% endif %}
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <tfoot>
+      <strong><span> {{ order.order_number }}</span></strong> | <span>Print Order: {{ "now" | date: "%d-%m-%Y %H:%M" }}</span>
+    </tfoot>
+  </div>
+</div>
+
+<style type="text/css">
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .logo {
+    margin: 0;
+    height: 100px;
+    width: 95px;
+  }
+
+  .tabela-tipos th {
+    width: 155px;
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 5px;
+    border-style: groove;
+    border-collapse: collapse;
+  }
+
+  .wrapper {
+    width: 1024px;
+    margin: auto;
+    padding: 4em;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 250;
+  }
+
+  .header {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .total-list {
+    width: 33%;
+  }
+
+  .total-list ul {
+    list-style: none;
+    border: solid 1px #000;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+
+  .total-list ul li {
+    border-bottom: solid 1px #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .total-list ul li:last-child {
+    border-bottom: 0;
+  }
+
+  .total-list ul li div:first-child {
+    border-right: 1px solid #000;
+    width: 40%;
+    margin: 0;
+    padding: 5px 0;
+    text-align: left;
+    padding-left: 5px;
+  }
+
+  .shipping-address {
+    width: 33%;
+  }
+
+  .order-title {
+    width: 33%;
+  }
+.line-item-description-line{
+    display: block;
+  }
+.line-item-description-line-var{
+    display: block;
+    color: red;
+    font: bold;
+    font-size: 1.1em;
+    font-style: italic;
+  }
+  .line-item-description-line-sku{
+    display: block;
+    color: blue;
+    font: bold;
+    font-size: 1.1em;
+    font-style: normal;
+  }
+
+  .to-uppercase {
+    text-transform: uppercase;
+  }
+
+  .ship-order {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  .header-title {
+    font-weight: bold;
+    text-align: center;
+    
+  }
+
+  .align-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+
+  }
+
+  .content-table td,
+  .content-table tr,
+  .content-table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+.content-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.content-table tr:hover {background-color: #ddd;}
+
+.content-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font: bold;
+  background-color: #04AA6D;
+  color: white;
+  width: 10%;
+}
+
+.content-table th:nth-child(1) {
+    width: 60%;
+  }
+
+.content-table th {
+    border: solid 1px #000;
+    border-right: 0;
+  }
+
+  .content-table th:last-child {
+    border-right: solid 1px #000;
+  }
+
+  .content-table td {
+    border: solid 1px #000;
+    border-top: 0;
+    border-right: 0;
+  }
+
+  .content-table td:last-child {
+    border-right: solid 1px #000;
+  }
+
+  .itens-content {
+    font-weight: bold;
+    display: flex;
+  }
+
+  .itens-content img {
+    margin: 3px;
+    margin-right: 15px;
+  }
+
+  .itens-content div:first-child {
+    display: inline;
+    float: left;
+  }
+
+  .item-qtd {
+    text-align: center;
+    font: bold;
+    font-size: 1.4em;
+  }
+
+  .item-qtd-maior {
+    text-align: center;
+    color: red;
+    font: bold;
+    font-size: 2em;
+  }
+
+  .order-container {
+    padding-top: 10px;
+  }
+
+  .aspect-ratio {
+    position: relative;
+    display: block;
+    background: #fafbfc;
+    padding: 0;
+  }
+
+  .aspect-ratio::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid rgba(195, 207, 216, 0.3);
+  }
+
+  .aspect-ratio--square {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  .aspect-ratio__content {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .ship-to {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font: bold;
+      font-size: 1.1em;
+  }
+</style>
