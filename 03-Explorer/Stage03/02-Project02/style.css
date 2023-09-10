@@ -1,0 +1,123 @@
+/* REM = Root EM */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* pega o pixel do navegador 
+        1rem = 16px setado no navegador
+        Alterar o tamanho para 10 px para poder os pixels
+        serem divido por 10 facilmente
+    */
+	font-size: 62.5%; /* 10px*/
+}
+
+main {
+	max-width: 33rem;
+	margin: 0 auto;
+}
+
+main p:first-child {
+	color: #7158ef;
+	line-height: 3.2rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+
+	margin-bottom: 1.7rem;
+}
+
+body {
+	background: #ece9fd;
+	font-family: "Epilogue", sans-serif;
+	font-size: 1.6rem;
+	padding: 6rem 2.3rem 6.6rem;
+}
+
+h1 {
+	color: #090039;
+	font-size: 4rem;
+	font-weight: 800;
+	line-height: 4.8rem;
+
+	margin-bottom: 1.5rem;
+}
+
+h1 + p {
+	color: rgba(10, 0, 57, 0.64);
+	line-height: 3.2rem;
+
+	margin-bottom: 3.2rem;
+}
+
+a {
+	color: #090039;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #7158ef;
+	font-weight: bold;
+}
+
+ul {
+	list-style: none;
+	margin-top: 7.7rem;
+}
+
+ul li {
+	color: #090039;
+	font-weight: 700;
+	font-size: 2.4rem;
+	line-height: 3.2rem;
+
+	max-width: 25.7rem;
+	display: flex;
+	gap: 3.8rem;
+
+	
+}
+
+ul li + li {
+    margin-top: 3.2rem;
+}
+
+ul li span {
+	color: #090039;
+	font-weight: 800;
+	font-size: 7.2rem;
+	line-height: 8rem;
+	letter-spacing: -2px;
+}
+
+ul li:first-child {
+	margin-left: 1rem;
+}
+
+/* media queries 
+ utiliza essa função para aplicar as mudanças
+ na tela */
+@media (min-width: 700px) {
+	body {
+		padding: 8rem;
+	}
+
+	main {
+		max-width: 1020px;
+		display: flex;
+		gap: 10rem;
+	}
+
+	main > div {
+		max-width: 484px;
+	}
+
+	ul li {
+		align-items: center;
+		gap: 5.3rem;
+		max-width: 450px;
+	}
+
+}

@@ -1,0 +1,60 @@
+<!-- 
+    <input type = "url"> 
+
+    -espera que o usuario digite uma url
+    -irá validar se o valor digitado é uma url
+
+    Atributos
+
+        -minlength / maxlength -> numero minimo e maximo de caracteres
+        -size -> o numero de caracteres aceitaveis 
+        -pattern ->
+            -expressão regular para validar o que está sendo digitado no campo
+            -altamente recomendado o uso de um padrão de segurança altas em senhas
+            -Exemplo : queremos que a senha contenha caracteres hexadecimais com limite de min 4 e max 8
+                * pattern=".+@rocketseat\.com\.br"
+        
+        -placeholder -> mostra um exemplo de texto a ser digitadono campo
+        -readonly / disabled -> atributo indicando se o campo esta habilitado ou não
+        -required -> o campo será obrigatorio
+        -multiple -> o campo irá receber 1 ou mais emails, separada por virgulas. 
+        -spellcheck -> Habilitar a verificação ortografica para este input
+
+        -list ->
+          - O id de uma tag <datalist> que esta no mesmo documento
+          -<datalist> irá contar uma lsita de valores pre definidos a fim de sugerir ao usuario 
+            quais valores estão disponiveis 
+          -Os valores do <datalist> que não forem compativeis com o campo não serão apresentados
+            como sugestão
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT-Url</title>
+  </head>
+  <body>
+    <form id="meu-form" action="">
+      <legend>URL</legend>
+      <fieldset>
+        <datalist id="urlslist">
+          <option>http://google.com</option>
+          <option>http://globo.com</option>
+          <option>http://canada.com</option>
+        </datalist>
+        <input
+          type="url"
+          placeholder="http://example.com"
+          required
+          list="urlslist"
+          title="Somente sites são aceitos nesse campo"
+          spellcheck="true"
+        />
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

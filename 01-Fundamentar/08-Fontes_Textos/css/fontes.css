@@ -1,0 +1,18 @@
+p{
+ /* font-family: sans-serif; 
+    font-weight: bolder; 
+    font-style: italic; 
+    font-size: 12 px;
+    font-family: 'Lato', sans-serif;
+    font-variant: small-caps;
+    font-stretch: expanded;
+    letter-spacing: 2px;
+    word-spacing: 1em;
+    line-height: 2;
+    text-transform: uppercase;
+    text-decoration: underline dotted red;
+    text-align:justify;
+    text-shadow: 1px 1px 8px red; */
+    /* font-style, font-variant, font-weight, font-stretch, font-size, line-height e font-family */
+    font: italic normal bold 2em/2 'Lato', sans-serif;
+}

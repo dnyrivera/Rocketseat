@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.fontSize": 13,
+		"workbench.colorTheme": "Bumblebee",
+		"editor.formatOnSave": true,
+		"editor.minimap.autohide": true
+	}
+}

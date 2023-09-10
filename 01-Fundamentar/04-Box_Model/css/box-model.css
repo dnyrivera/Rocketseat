@@ -1,0 +1,60 @@
+/* Faz o calculo do tamanho do box a partir das bordas
+ e não do conteudo*/
+*{
+    /* box-sizing: border-box; */
+    margin: 0;
+}
+div.teste1 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    margin: 10%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    /* display: inline; Altera o comportamento para a mesma linha  
+} 
+span{
+    width: 10px;
+    height: 10px;
+    border: 1px solid green;
+    /* display: block;  Altera o comportamento para bloco 
+    e pula para a proximo linha*/
+}
+
+div.teste2 {
+    border: 1px solid yellow;
+    width: 100px;
+    height: 100px;
+    /* display: inline; */
+    margin: 10px auto; 
+}
+div {
+    margin-bottom: 8px;
+}
+ section.teste3 {
+    margin-top: 8px ;
+}
+
+div.padding{
+    color: black;
+    padding: 10px 2em 8px 50%;
+    background-color: yellow;
+    border: 1px solid 1em green;
+}
+
+div.border{
+    width: 100px;
+    height: 100px;
+    margin: 20% auto;
+
+    /*Muda o posicionamento do preenchimento da borda*/
+    box-sizing: border-box;
+    
+    /*Controla as bordas internas e externas */
+    border: 10px solid red;
+    /* border-top: double green 4px;
+    border-bottom: none; */
+
+    /*usado para acessiblidade nos inputs por exemplo*/
+    /* outline: yellow 4px solid;  */
+}

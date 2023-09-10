@@ -1,0 +1,109 @@
+<!-- HYPERLINKS <a>
+    +Anatomia
+    +Atributos
+        -globais (title, id, class, etc...)
+        -href
+            - para onde iremos quando clicarmos no link
+                -url completa
+                -fragmento
+                -email
+                -telefone
+                -e outros.
+        -download 
+            - fazer download clicando na url
+        -target
+            -_self (padrao)
+            -_blank (nova aba)
+-->
+<h1>HYPERLINKS &lt;a&gt;</h1>
+<hr />
+
+<!-- <a href="http://www.google.com.br" target="_blank">Google</a> -->
+
+<p>Saiba mais</p>
+<ul>
+  <li><a href="#about">Sobre mim</a></li>
+  <li><a href="#history">Historia</a></li>
+  <li><a href="#works">Trabalhos</a></li>
+</ul>
+
+<h1 id="about">Sobre mim</h1>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa labore id, tenetur voluptates
+  recusandae quos dolores quam eius magni omnis quo, suscipit, esse consequatur architecto pariatur
+  mollitia. Deleniti, totam laudantium.
+</p>
+
+<h2 id="history">Historia</h2>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, sit? Odit, reiciendis adipisci
+  architecto ipsum voluptates dolorem hic culpa repudiandae nihil. Assumenda, nobis iure. Veniam
+  praesentium fugiat non. Est, laudantium.
+</p>
+
+<h2 id="works">Trabalhos</h2>
+<p>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente alias fugiat distinctio porro,
+  perspiciatis perferendis facilis nesciunt maiores excepturi deleniti neque aliquid quibusdam atque
+  sint accusamus iste quas error incidunt.
+</p>
+
+<p>Encontre -me</p>
+<ul>
+  <li><a href="https://rocketseat.com.br" target="_blank">Website</a></li>
+  <li><a href="mailto:donny.rivera@gmail.com" title="Email do usuario">Email</a></li>
+  <li><a href="tel:+14372243455">Telefone</a></li>
+</ul>
+
+<!-- Conteudo dos Hyperlinks
+    - qualquer tag pode ser utilizad como link
+-->
+<h2>Conteudo dos Hyperlinks</h2>
+<hr>
+<a href="http://google.com" title="Ir para o google">
+  <h1>Google</h1>
+  <p>Claro que posso</p>
+  <img src="https://source.unsplash.com/random/800x800" alt="">
+</a>
+
+<!-- URLs e Caminhos dos Arquivos
+  - Uniform Resource Locator
+    - https://www.rocketseat.com.br
+    - Sequencia de texto que define onde algo esta localizaod na Web
+
+    - URL usam caminhos para encontrar arquivos
+    - Caminhos dos Arquivos
+      - Onde, no explorador de arquivos, um recurso esta localizado 
+-->
+<h2>URLs e Caminhos dos arquivos</h2>
+<hr />
+<a href="02-elementos.html" target="_blank">Abrir Conceitos</a> <br />
+<a href="https://google.com" target="_blank">Abrir Google</a> <br />
+
+<!-- Como Navegar pelos Caminhos
+  - Mesmo diretorio (./) Busca no mesmo diretorio 
+  - Entrando em diretorios()
+  - Saindo de diretorios (../) Sai do diretorio 
+  - Diretorio Raiz (root ou pai) Sempre onde o arquivo está 
+-->
+<h2>Como Navegar pelos Caminhos</h2>
+<hr />
+<a href="03-links.html">Abrir Arquivo na pasta anterior anterior</a> <br>
+<a href="./03-links.html">Abrir Arquivo na mesma pasta</a> <br>
+<a href="Outros/01-conceitos.html" target="-_self">Abrir Arquivo em outra pasta</a> <br>
+<a href="../02-elementos.html">Abrir arquivo saindo da pasta atual</a> <br>
+
+<!--URls Absolutas x Relativas
+  - Absolutos
+    - Inclui protocolo e nome de dominio
+      - http://www.rocketseat.com.br/projeto/index.html
+      - Sempre apontara para o mesmo local, pois é absoluto
+    
+  - Relativos
+    - Relativo a pagina aberta no momento
+    - Apontara para lugares diferentes
+-->
+<h2>URLs Absolutas x Relativas</h2>
+<hr />
+<a href="google.com">Link Relativo as pastas do projeto</a> <br />
+<a href="https://www.google.com.br">Link Absoluto</a> <br />

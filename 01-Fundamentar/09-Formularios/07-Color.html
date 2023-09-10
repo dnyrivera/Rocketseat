@@ -1,0 +1,40 @@
+<!-- 
+    <input type = "color"> 
+
+    - Interface para selecionar cor
+    - Color picker
+
+    Atributos
+
+        -value -> RGB (Se invalido o preto será exibido)
+        -list ->
+          - O id de uma tag <datalist> que esta no mesmo documento
+          -<datalist> irá contar uma lsita de valores pre definidos a fim de sugerir ao usuario 
+            quais valores estão disponiveis 
+          -Os valores do <datalist> que não forem compativeis com o campo não serão apresentados
+            como sugestão
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT-File</title>
+  </head>
+  <body>
+    <form action="" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>INPUT-Color</legend>
+
+        <datalist id="colorsdata">
+          <option>#0000ff</option>
+          <option>#00ff00</option>
+          <option>#ff0000</option>
+        </datalist>
+        <input type="color" list="colorsdata" />
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!-- 
+    <input type = "checkbox"> 
+
+    - Caixas que podem ser marcadas
+    - Selecionar um valor para ser enviado
+    - Se não selecionado, não será enviado nenhum dado 
+
+    Atributos
+
+        -globais 
+        -value -> valor que aquele campo contem, se não estiver presente oo padrao é ON
+        -checked -> para deixar o campo marcado por padrão
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT-Checkbox</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Checkbox</legend>
+
+        <!-- Apenas um box -->
+        <label for="subscribe">Receber Notificaçoes: </label>
+        <input
+          type="checkbox"
+          name="subscribe"
+          id="subscribe"
+          checked
+          required
+        />
+        <button type="submit">Enviar</button>
+        <br /><br /><br />
+        <!-- Multiplos valores
+            -Usaremos o atributo name com o mesmo nome para os diversos campos.
+
+            interest=coding, music -> envio para o back end dessa maneira.
+        -->
+        <label for="survey">Choose your interests:</label>
+        <div style="background-color: rgba(255, 0, 0, 0.3)">
+          <input
+            type="checkbox"
+            name="interest"
+            id="coding"
+            value="coding"
+            checked
+          />
+          <label for="coding">Coding</label>
+        </div>
+        <div style="background-color: rgb(255, 255, 0, 0.3)">
+          <input type="checkbox" name="interest" id="music" value="music" />
+          <label for="music">Music</label>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

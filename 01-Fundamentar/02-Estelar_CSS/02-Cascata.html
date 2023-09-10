@@ -1,0 +1,91 @@
+<!-- A Cascata 
+
+    A escolha do browser de qual regra aplicar caso haja varias regras para 
+    o mesmo elemento
+
+    * Seu estilo é lido de cima para baixo.
+
+    É levado em consideração 3 fatores: 
+        1 - Origem do estilo
+        2 - Especificidade
+        3 - Importancia 
+
+    
+    Origem do Estilo 
+
+    inline > tag style > tag link
+
+    Especificidade
+    
+    É um calculo matematico onde, cada tipo de seletor e origem do estilo,
+    possuem valores a serem considerados.
+
+        0 - Universal selector, combinator, e negation pseudo-class (:no()
+        1 - Element Type Selector e Pseudo-elements (::before, ::after)
+        10 - Classes e attribute selectors ([type="radio"])
+        100 - ID selector
+        1000 - Inline
+
+    Regra !important
+
+        * Cuidado evite o uso 
+        * Não é considerado uma boa prática
+        * Quebra o fluxo natural da cascata
+-->
+
+<!-- @ Rules
+
+    Esta relacionado ao comportamento do Css
+    Começa com o "@" seguido do identificador 
+
+    Exemplos: 
+        1 - @import - Incluir um CSS Externo
+        2 - @media  - regras condicionais para dispositivos
+        3 - @font-face  - fontes externas
+        4 - @keyframes  - Animation
+-->
+
+<!-- Shorthand 
+
+    Junção de propriedades, resumido e legivel
+
+    Exemplo: 
+
+        background-color: #000;
+        background-image: url(images/bg.gif);
+        background-repeat: no-repeat;
+        background-position: left top;
+
+    Shorthand  
+        background: #000 url(images/bg.gif) no-repeat left top;
+
+    Observações: 
+        * Não irá considerar propriedades anteriores
+        * Valores não especificados irão assumir o valor padrão 
+        * Geralmente a ordem descrita não importa mas se houver muitas propriedades
+          com valores semelhantes poderemos encontrar problemas
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/02-cascata.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <style>
+        h1{
+            color:blueviolet;
+        }
+    </style> -->
+    <h1 class="titles" id="my-title">Titulo</h1>
+    <h2 style="color: yellow;">Subtitulo</h2>
+    <p id="my-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Autem nihil fugit <strong>deserunt doloremque alias,</strong>rerum voluptate iste modi 
+        voluptates quaerat esse ullam veritatis repudiandae, 
+        voluptatibus eius nobis necessitatibus, quae suscipit?</p>
+</body>
+</html>

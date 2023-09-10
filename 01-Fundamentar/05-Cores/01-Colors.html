@@ -1,0 +1,59 @@
+<!-- CORES
+    Usamos Css para alterar cores do nosso documento.
+
+    Tipos: 
+        * background-color (para boxes)
+        * color (para textos)
+        * border-color (para bordas)
+        * outros....
+
+    Valores:
+
+        Podemos definir os valores por:
+
+        * palavra-chave (blue, transparent)
+        * hexadecimal (#990011)
+        * funções: rgb, rgba, hsl, hsla
+
+        HEXADECIMAL -> values 0-9 e A-F
+        color: #090; /* RED, GREEN, BLUE */
+        color: #009900;
+        color: #090a;
+        color:#009900aa;
+
+        RGB → Red, Green e Blue
+        O alpha representa a transparência da cor
+        /*<rgb()> values */
+        color: rgb(34, 12, 64, 0.6) /* 0-255 */
+        color: rgba(34, 12, 64, 0.6)
+
+        HSL → Hue - Saturation - Lightness
+        color: hsl(180, 100%, 50%, 60%)
+        color: hsla(180, 100%, 50%, 60%)
+
+        GLOBAL VALUES
+        color: inheritr; /* Herda a cor do elemento anterior */
+        color: initial; /* Volta a sua cor inicial */
+        color: unset; /* Pega a cor do contexto */
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/01-Colors.css">
+    <title>CORES</title>
+ </head>
+ <body>
+    <div>Cores CSS</div>
+    <h1>hexadecimal</h1>
+    <h2>rgb</h2>
+    <h3>hsl</h3>
+    <span>
+        <h4>herança de cor </h4>
+    </span>
+ </body>
+ </html>

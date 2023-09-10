@@ -1,0 +1,45 @@
+<!-- Page Layouts
+- Tables
+- Floats e clear
+- Frameworks e Grid Systems
+- Flexbox
+- Grid
+-->
+
+<!-- Posicionamentos
+
+    Controlar onde na pagina o elemento irá ficar, alterando o fluxo normal dos elementos 
+
+    -name= position
+    -value = static | relative | absolute | fixed 
+
+    -static: um embaixo no outro se for block ou ao lado se for inline, fluxo normal do comportamento do elemento
+    
+    -relative: movimenta livremente na pagina  
+        - top | right | bottom | left | z-index 
+    
+    -absolute: como se fosse houvesse uma segunda camada na pagina, no caso de um elemento pai ele segue o elemento pai primeiro
+         - top | right | bottom | left | z-index 
+    
+    -fixed: fica fixo na pagina em uma segunda camada
+         - top | right | bottom | left | z-index
+
+    Element Stacking: utilizar o z-index para mudar a camada do elemento para dar mais peso a camada superior
+        -z-index : maior numero = topo 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/pagelayout.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+  </body>
+</html>

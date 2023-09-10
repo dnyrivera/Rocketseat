@@ -1,0 +1,26 @@
+/* :root ou html para alterar o valores root */
+body{
+    height: 100vh;
+    margin:  0px;
+    /* width: 50%;  Vai ser 50% do valor do pai */
+}
+div{
+    background-color: blue; 
+}
+
+p{
+    font-size: 1em;
+}
+.box{
+    margin: 10px;
+    height: calc(100% - 40px); /*Usado para fazer calculos de posicionamento*/
+    width: 100%;
+    background-image: url(http://source.unsplash.com/random);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.box::after{
+    font-size: 100px;
+    color: white;
+    content: "Happy New Year";
+}

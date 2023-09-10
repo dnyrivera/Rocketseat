@@ -1,0 +1,30 @@
+<!-- 
+     <input type="number"/>
+      -Entrada de numeros nos formularios
+
+    Atributos 
+      -min / max -> valor minimo e maximo da seleção
+      -step -> valor que sera alterado ao utilizar as setas no campo
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT-Number</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Number</legend>
+        <label for="qtd_pessoas">Informe a quantidade de litros: </label>
+        <input type="number" name="qtd_pessoas" id="qtd_pessoas" placeholder="Qtd Litros" step="0.1">
+        <br><br>
+        <label for="qtd_filhos">Informe a quantidade de filhos: </label>
+        <input type="number" name="qtd_filhos" id="qtd_filhos" placeholder="0" min="0" max="100">
+        <br><br>
+        <button>Enviar</button>
+  </body>
+</html>

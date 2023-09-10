@@ -1,0 +1,78 @@
+<!-- INPUT <input>
+    -Um dos mais usados em formularios
+    -Aceita os mais diversos tipos de dados 
+    -Um dos mais poderosos e complexos
+    -Elevado numero de combinações
+
+    Atributos: 
+        -type
+        -name
+        -id
+
+    Atributos comuns: 
+        -autocomplete -> completa o texto do campo
+        -autofocus -> foca no  campo ao abrir a pagina 
+        -disable -> desabilita o campo deixando ele sem poder editar
+        -readonly -> desabilita o campo mas nao fica cinza igual o disable (quase todos)
+        -value -> valor de dentro do campo 
+        -form -> utilizado para linkar o form com o input pelo id/form (quase todos)
+        -name -> atributo para utilizar as info no backend 
+        -required -> campos obrigatorios no formulario (quase todos)
+        -placeholder -> help do campo para password, search, tel, text, url (quase todos)
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+  </head>
+  <body>
+    <form id="meu-form">
+      <fieldset>
+        <legend>INPUTS</legend>
+        <label>Text</label>
+        <input type="text" value="Aceita qualquer texto" /> <br />
+        <label>Date</label>
+        <input type="date" /><br />
+        <label>Numero</label>
+        <input type="number" value="0" /><br />
+        <label>e-mail</label>
+        <input type="email" value="email@valido" /> <br />
+        <label>Files</label>
+        <input type="file" /><br />
+        <label>Password</label>
+        <input type="password" /> <br />
+
+        <!-- Autocomplete -->
+        <label for="">Autocomplete</label>
+        <input type="text" autocomplete="email" />
+        <br />
+        <!-- Autofocus -->
+        <label for="">Autofocus</label>
+        <input type="type" autofocus />
+        <br />
+        <!-- Disable -->
+        <label for="">Disable</label>
+        <input type="type" value="texto" disabled />
+        <br />
+        <!-- ReadOnly -->
+        <label for="">ReadOnly</label>
+        <input type="type" value="texto" readonly />
+        <br />
+        <!-- Form -->
+        <label>Form</label>
+        <input type="email" name="email" form="meu-form" />
+        <br />
+        <!-- Required -->
+        <label>Required (obrigatorio) </label>
+        <input type="text" required />
+        <br />
+        <!-- Placeholder -->
+        <label for="e-mail">Email:</label>
+        <input id="e-mail" type="email" placeholder="Digite seu e-mail" />
+      </fieldset>
+    </form>
+  </body>
+</html>

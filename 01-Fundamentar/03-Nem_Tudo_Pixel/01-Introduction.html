@@ -1,0 +1,87 @@
+<!-- Tipos Numericos
+
+    <integer>   Numero inteiro como -10 ou 223
+    <number>    Numero Decimal como -2.4 , 64.0 ou 0.234
+    <dimension> É um <number> com uma unidade de medida junto: 90deg, 2s, 8px
+    <percentagem> Representa a fração de outro número: 50%
+
+-->
+<!-- Unidades Comuns
+
+    <lenght>    Representa um valor de distancia: px, em, vw 
+    <angle>     Representa um valor em angulo: deg, rad, turn
+    <time>      Representa um valor em tempo: s, ms
+    <resolution> Representa um valor em resolução: dpi
+
+-->
+
+<!-- Distancias Absolutas <lenght>
+    
+    1 - São fixas e não alteram seu valor
+    2 - O mais comum e mais utilizado é o px
+    3 - Não recomendado usar em cm 
+
+    Unidade         Nome                Equivalencia
+    cm              centimetros         1cm = 96px/2.54
+    in              inches              1in = 2.54cm = 96px
+    px              pixels              1px = 1/96th of 1in
+
+-->
+<!-- Distancias Relativas 
+
+    São relativas a algum outro valor, pode ser o elemento pai, ou root, ou o 
+    tamanho da tela.
+
+    1 - Maior adpatação aos diferentes tipos de tela
+
+    Unidade         Relativo a 
+    em              Tamanho da fonte do elemento pai
+    rem             Tamanho da fonte do elemento raiz (root/html)
+    vw              1% da viewport width
+    vh              1% da viewport height 
+ -->
+ <!-- Porcentagens 
+
+    Em muitos casos é tratado da mesma maneira que as distancias <length>
+    Sempre será relativo a algum valor (relativo ao valor do pai)
+
+-->
+ <!-- Posicoes 
+
+    Representa um conjunto de coordenadas 2D:
+    -top, right, bottom, left e center
+    * Usado para alguns tipos de propriedades 
+    * Não confundir com a propriedade 'position'
+
+-->
+
+<!-- Funcões
+
+    Em programação funções são reconhecidas por causar um reaproveitamento
+    de código, exemplos: 
+    rgb() 
+    hsl()
+    url()
+    calc()
+-->
+
+<!-- Strings e Identificadores
+    Strings : Texto envolto em aspas
+    Identificadores : red, black, gold
+-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/01-Introduction.css">
+    <title>Document</title>
+ </head>
+ <body>
+    <div class="box">
+        
+    </div>
+ </body>
+ </html>

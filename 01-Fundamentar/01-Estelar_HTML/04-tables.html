@@ -1,0 +1,81 @@
+<!-- Tabelas HTML
+    Prós 
+    -Visualização de dados via linhas e colunas.
+    -Boa Acessibilidade para leitura dos dados
+
+    Contras
+    -Pouco Flexivel
+    -Precisa de estilização para melhor visualização
+
+    Não usar 
+    -Para criar Layout
+-->
+<table>
+  <caption> Pessoas por idade </caption>
+  <thead>
+    <tr> <!--Criar a linha da tabela-->
+      <th>Nome</th>  <!--Criar colunas da tabela-->
+      <th>Idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Donny Rivera</td> <!-- Conteudo da linha -->
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>Josany Rivera</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>2 Pessoas</td>
+    </tr>
+  </tfoot>
+</table>
+<br /><br />
+<!--
+    2 Lojas
+        Quantos produtos foram produzidos, quantos vendidos e agrupado por nome do produto
+-->
+<table>
+  <caption> Report Producao x Vendas </caption>
+  
+  <!-- Agrupar colunas para aplicar stilos -->
+  <colgroup>
+    <col />
+    <col span="2" style="background-color: green" />
+    <col span="2" style="background-color: blue" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      <th colspan="2" scope="colgroup">Store 01</th> <!--Escopo de agrupamento de colunas scope-->
+      <th colspan="2" scope="colgroup">Store 02</th>
+    </tr>
+    <tr>
+      <th scope="col">Produzido</th>
+      <th scope="col">Vendidos</th>
+      <th scope="col">Produzido</th>
+      <th scope="col">Vendidos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Produto01</th>
+      <td>50</td>
+      <td>30</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th scope="row">Produto02</th>
+      <td>20</td>
+      <td>10</td>
+      <td>50</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>

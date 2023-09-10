@@ -1,0 +1,165 @@
+<!-- FORMS    
+    Para que serve ? 
+        -Capturar dados de entrada (input)
+        -Interação
+        -Controle
+
+    Pré requisitos
+        -Básico HTML
+    
+    Dominar
+        -Estilização
+        -Validação
+        -Controles Customizados
+        -Javascript
+ -->
+<!-- FORM <form>
+    
+        -Elemento que definira um formulário
+        -E um container estilo <section> <footer>
+    
+    Atributos Básicos - 
+        -action -> para onde será submetido
+        -method -> GET ou POST
+ -->
+<!-- FIELDSET <fieldset> 
+    
+        -agrupamento de campos
+        -mesmo proposito
+        -semântico
+        -acessibilidade
+    
+    Atributos Especiais
+        -disabled
+            -desabilita todos os elementos internos
+            -não serão enviados ao submeter o formulário
+        
+        -form
+            -o id de um formulário ao qual esse fieldset pertence
+            -não precisa estar dentro do formulário
+        
+        -name 
+            -nome do grupo
+        
+        -<legend>
+            -nome do agrupamento
+            -primeiro elemento dentro do fieldset
+-->
+<!-- LABEL <label>
+        -associar e identificar uma (ou mais) tag de entrada de dados
+        -acessibilidade
+        -voce poderá clicar para mudar o foco da entrada de dados 
+
+    Atributos
+        -for
+            -para fazer conexão entre este label e a tag de entrada de dados 
+            -é feita via id do input
+            -só funciona com elementos específicos 
+                -button, input (not hidden), meter, output, progress, select, textarea
+-->
+<!-- BUTTON <button>
+    -representa um botão
+    -Usado para enviar formulários
+    -E estilizado pelo user agent
+    
+    Atributos comuns
+        -type
+            -submit / reset / button 
+        -autofocus
+        -disabled
+        -name
+        -value
+        -form
+-->
+<!-- DATALIST <datalist> 
+    -lista de valores como sugestão a uma tag <input> 
+    -Valores sugestivos e não obrigatórios
+    -Usuário poderão selecionar um dos valores, ou colocar um valor diferente da sugestão
+        <datalist id="fruitsdata">
+            <option>apple</option>
+            <option>banana</option>
+            <option>mango</option>
+            <option>orange</option>
+        </datalist>
+
+    #list
+        -Recebe como valor o id de um <datalist> residente no mesmo documento
+
+    #tipos de inputs não suportados (conforme especificação)
+        -hidden, password, checkbox, radio, file, ou qualquer tipo de button
+    
+    #user agent
+        -Verificar a compatibilidade com o browser http://caniuse.com
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulários</title>
+	</head>
+	<body>
+		<!-- OPTION FIELDSET INSIDE FORM -->
+		<form action="" method="POST">
+			<fieldset>
+				<legend>Contato</legend>
+				<label for="">Nome Contato:</label>
+				<input type="text" />
+			</fieldset>
+		</form>
+
+		<!-- OPTION FIELDSET SEPARATED -->
+		<form id="cliente">
+			<button>Enviar</button>
+		</form>
+		<fieldset form="cliente">
+			<legend>Cliente</legend>
+			<label for="">Nome Cliente:</label>
+			<input type="text" />
+		</fieldset>
+
+		<form action="">
+			<fieldset>
+				<legend>Label</legend>
+				<label for="nome">Nome + Sobrenome </label>
+				<input id="nome" type="text" />
+			</fieldset>
+		</form>
+
+		<form action="" id="meu-form">
+			<fieldset>
+				<legend>Button</legend>
+				<input type="text" value=" " />
+				<button autofocus name="button" value="valor-enviado" type="submit">
+					Enviar
+				</button>
+				<button disabled form="meu-form" type="reset">Limpar</button>
+				<input type="submit" form="meu-form" value="InputSubmit" />
+			</fieldset>
+		</form>
+
+		<form action="">
+			<fieldset>
+				<legend>DataList</legend>
+
+				<datalist id="fruitsdata">
+					<option>Apple</option>
+					<option>Banana</option>
+					<option>Mango</option>
+					<option>Orange</option>
+					<option>Cherry</option>
+				</datalist>
+				<input type="text" list="fruitsdata" placeholder="Escolha uma fruta" />
+
+				<datalist id="colorsdata">
+					<option>#ff0000</option>
+					<option>#00ff00</option>
+					<option>#0000ff</option>
+				</datalist>
+				<input type="color" list="colorsdata" />
+			</fieldset>
+		</form>
+	</body>
+</html>

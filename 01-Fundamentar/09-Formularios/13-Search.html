@@ -1,0 +1,61 @@
+<!-- 
+     <input type="search"/>
+      -Para campos de busca
+      -E igual ao campo do tipo text mas poderá ser um pouco diferente dependendo do user agent
+    
+    Atributos 
+
+      -pattern 
+      -arial-label
+      -list ->
+        - O id de uma tag <datalist> que esta no mesmo documento
+        -<datalist> irá contar uma lsita de valores pre definidos a fim de sugerir ao usuario 
+          quais valores estão disponiveis 
+        -Os valores do <datalist> que não forem compativeis com o campo não serão apresentados
+          como sugestão
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT-Search</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Search</legend>
+        <!-- <label for="">Digite aqui sua busca:</label> -->
+        <datalist id="pcslist">
+          <option>Macbook</option>
+          <option>Alienware</option>
+          <option>Dell</option>
+        </datalist>
+        <input
+          type="search"
+          name="query"
+          list="pcslist"
+          placeholder="Digite aqui sua busca"
+          size="30"
+          aria-label="Campo de pesquisa: Digite aqui sua busca"
+        />
+        <button>Search</button> <br />
+        <br />
+        <label for="cpf">Digite seu CPF: </label>
+        <input
+          type="search"
+          name="cpf"
+          maxlength="11"
+          size="13"
+          placeholder="99999999999"
+          pattern="[0-9]{11}"
+          title="Digite o seu CPF com 11 digitos, somente numeros."
+          required
+        />
+        <button>Pesquisar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

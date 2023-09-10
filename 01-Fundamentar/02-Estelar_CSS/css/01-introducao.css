@@ -1,0 +1,56 @@
+/*Regra de CSs para importar referencias externas como Fontes do Google, etc*/
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;588&family=Roboto+Mono:wght@100&family=VT323&display=swap");
+
+/* Selector CSS 
+    - Serve para conectar um elemento Html com o CSS
+    Tipos:
+        - Global selector ('*')
+        - Element/Type Selector (h1, h2, p , div)
+        - Id selector (#box #container)
+        - Class selector (.red .m-4)
+        - Attribute selector, Pseudo-class, Pseudo-elemento e outros 
+*/
+
+/* Caixas 
+    - Voce ira perceber que (quase) tudo são caixas no CSS
+    - Posicionamentos, tamanhos, espaçamentos, bordas, cores
+    - Caixa pode ficar ao lado uma da outra, ou acima
+    - Elementos HTML são caixas.
+*/
+
+/* Adicionando CSS 
+    - Inline = atributo style
+    - <style> = tag html que irá conter o css
+    - <link> = arquivo css externo
+    - @import = arquivo CSS Externo
+*/
+
+* {
+  margin: 0;
+}
+
+/* h1,
+h2 {
+  color: yellow;
+  font-size: 45px;
+  background-color: black;
+} */
+h1 {
+  border: 1px solid yellow;
+  margin: 200px;
+  padding: 60px;
+  font-family: "Red Hat Mono", monospace;
+  font-family: "Roboto Mono", monospace;
+  font-family: "VT323", monospace;
+}
+
+strong {
+  color: crimson;
+}
+/* #container {
+  width: 300px;
+} */
+
+/* .m-40 {
+  margin: 40px;
+} */

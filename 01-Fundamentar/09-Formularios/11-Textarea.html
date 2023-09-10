@@ -1,0 +1,45 @@
+<!-- 
+    <textarea>
+
+    - mais de uma linha
+    - util para textos grandes
+    
+    Atributos 
+      -id
+      -name
+      -rows e cols
+      -maxlength e minlength
+      -wrap
+      .. outros comuns ao <input> 
+        - autocomplete, autofocus, disabled, placeholder, readonly, form, required
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT-Textarea</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Textarea</legend>
+        <label for="message">Messagem</label>
+        <textarea
+          id="message"
+          name="message"
+          cols="30"
+          rows="10"
+          wrap="on"
+          maxlength="100"
+          required
+          placeholder="Digite aqui sua mensagem"
+          disabled
+        ></textarea>
+        <button>Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

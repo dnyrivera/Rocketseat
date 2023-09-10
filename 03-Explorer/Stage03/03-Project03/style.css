@@ -1,0 +1,200 @@
+/* Variables CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--ff-heading: "Epilogue", sans-serif;
+	--ff-texting: "Open sans", sans-serif;
+
+	--hue: 250;
+	--bg-primary: hsl(var(--hue), 22%, 20%);
+	--fc-primary: hsl(var(--hue), 0%, 100%);
+	--fc-secondary: hsl(var(--hue), 50%, 80%);
+	--fc-secondary-dark: hsl(var(--hue), 100%, 11%);
+
+	font-size: 62.5%;
+	--fs-body: 1.6rem;
+	--fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+	--fs--heading-sm: clamp(3rem, 0.5rem + 4vw, 4rem);
+}
+
+body {
+	font-family: var(--ff-texting);
+	font-size: var(--fs-body);
+	color: var(--fc-primary);
+
+	background-color: var(--bg-primary);
+}
+
+main {
+	display: grid;
+	gap: 3.2rem;
+	animation: downtop 700ms 350ms backwards;
+	border: 1px solid red;
+}
+
+.page {
+	max-width: clamp(33rem, 40rem + 60vw, 117rem);
+	/* max-width: 33rem; */
+	margin: 0 auto;
+	padding: 0 2rem;
+	/* border: 1px solid red; */
+}
+
+header {
+	font-family: var(--ff-heading);
+	text-align: center;
+
+	margin: 10rem 0 8rem;
+	animation: topdown 700ms;
+}
+/* Utilizando as animações */
+/* animation-name: topdown; chama a animação criada la embaixo */
+/* animation-duration: 700ms; */
+/* animation-fill-mode: forwards; */
+/* animation-duration: reverse; iniciar a animação invertidamente */
+/* animation-delay: 200ms; */
+/* animation-timing-function: ease; */
+/* animation-iteration-count: 10; quantas vezes ira repetir */
+/* animation-play-state: paused; pause imediatamente pausado */
+
+header:hover {
+	/* Iniciar a animação passando o mouse */
+	animation-play-state: running;
+}
+
+header p {
+	color: var(--fc-secondary);
+	font-weight: 400;
+	line-height: 3.2rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+
+	margin-bottom: 1.7rem;
+}
+
+header h1 {
+	font-size: var(--fs-heading);
+	font-weight: 800;
+	line-height: 4.8rem;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.card {
+	position: relative;
+	font-family: var(--fs-heading);
+}
+
+.card img {
+	border: 1px solid green;
+	height: 41.6rem;
+	object-fit: cover;
+
+	border-radius: 6px;
+	transition: all 200ms;
+	filter: brightness(0.5) blur(1px); /*aumentar o brilho,saturação,embaçar, etc */
+}
+
+.card img:hover {
+	transform: scale(1.1);
+	opacity: 0.3;
+}
+
+.card h2 {
+	font-size: var(--fs--heading-sm);
+	font-weight: 800;
+
+	position: absolute;
+	bottom: 5.2rem;
+	left: 2.8rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.card h2 span {
+	color: var(--fc-secondary-dark);
+	font-size: var(--fs-body);
+	font-weight: 400;
+	line-height: 3.2rem;
+
+	border-radius: 2rem;
+	background-color: var(--fc-primary);
+
+	height: 3.8rem;
+	width: fit-content;
+	padding: 0 1.6rem;
+
+	display: inline-flex;
+	align-items: center;
+}
+/* Criação de animação  */
+@keyframes topdown {
+	0% {
+		opacity: 0;
+		transform: translateY(-15px);
+	}
+	/* 
+	50% {
+		opacity: 1;
+	} */
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes downtop {
+	0% {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+/* Tela tamanho desktop */
+@media (min-width: 700px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+	/* removido por causa da utilização do CLAMP() */
+	/* :root { 
+		--fs-heading: 5.6rem;
+	} 
+	.page {
+		max-width: 130rem;
+		padding: 0 5rem;
+	} */
+}
+
+@media (min-width: 900px) {
+	main {
+		grid-template-areas:
+			"colA colB colB"
+			"colC colC colD";
+	}
+	main div:nth-child(1) {
+		grid-area: colA;
+	}
+	main div:nth-child(2) {
+		grid-area: colB;
+	}
+	main div:nth-child(3) {
+		grid-area: colC;
+	}
+	main div:nth-child(4) {
+		grid-area: colD;
+	}
+}

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+}
+/* header{
+    height: 100px;
+    border: 5px dashed red;
+    padding: 16px;
+
+    background-color:rgb(55, 100, 50);
+    background-image: url(https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy&w=3600);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    background-clip: content-box;
+}    */
+
+main{
+    
+    color: White;
+    
+    /* A propriedade background-color define a cor de fundo do elemento selecionado. */
+    background-color:rgb(55, 100, 50);
+    
+    /* Para adicionar uma imagem como background podemos usar a propriedade background-image
+    Por padrão a imagem vai se repetir e podemos modificar essa opção usando 
+    a propriedade background-repeat
+    
+    Values 
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: repeat;
+    background-repeat: space;
+    background-repeat: round;
+    background-repeat: no-repeat;
+    
+    Podemos usar 2 valores: horizontal | vertical 
+    background-repeat: repeat space;
+    background-repeat: repeat repeat;
+    background-repeat: round space;
+    background-repeat: no-repeat round; */
+    background-image: url(https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy&w=3600);
+    background-repeat: no-repeat;
+
+    /* Com a propriedade background-position podemos mudar a posição da imagem do background.
+    
+    Pricipais valores
+    background-position: top;
+    background-position: bottom;
+    background-position: left;
+    background-position: right;
+    background-position: center; */
+    background-position: center;
+    
+    
+    /* Para mudar o tamanho da imagem do background usamos a propriedade background-size.
+    Values
+    background-size: cover;
+    background-size: contain;
+    
+    Podemos usar 2 valores, o primeiro é para a largura da imagem e o segundo é para a altura 
+    background-size: 40% auto;
+    background-size: 2em 25%;
+    background-size: auto 8px;
+    background-size: auto auto; */
+    background-size: contain;
+
+    /*  A propriedade background-origin é quem define o ponto de origem de uma imagem específica.
+    Principais valores
+    background-origin: border-box;
+    background-origin: padding-box;
+    background-origin: content-box; */
+    background-origin: content-box;
+
+    /* O background-clip define se a cor ou imagem do background iniciam debaixo de sua área de borda, preenchimento ou conteúdo.
+    Principais valores 
+    background-clip: border-box;
+    background-clip: padding-box;
+    background-clip: content-box;
+    background-clip: text; */
+    background-clip: content-box;
+
+    /* A propriedade background-attachment determina se a posição da imagem vai ser fixa ou se vai rolar junto com o conteúdo.
+    Principais valores
+    background-attachment: scroll;
+    background-attachment: fixed;
+    background-attachment: local;*/
+    background-attachment: fixed; 
+    
+    /* Podemos usar o shorthand background para definir todos os valores do background */
+    /* background: 
+    rgb(55, 100, 50) 
+    url(https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy&w=3600)
+    no-repeat center top / cover 50px border-box content-box fixed ; */
+    
+    /* Background Gradiente  
+    linear-gradient() é a função usada para criar gradient linear com o CSS.
+    radial-gradient() é a função usada para criar gradient circular.*/
+    background: linear-gradient(180deg,red, yellow, blue);
+    background: radial-gradient(black, gray);
+
+   /* Misturar Backgrounds */
+   background: linear-gradient(rgba(255,255,255,0), rgba(255,0,0,0.2)),
+   url(https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy&w=3600)
+   no-repeat center / cover content-box fixed;
+}   

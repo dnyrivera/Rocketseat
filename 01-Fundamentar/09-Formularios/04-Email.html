@@ -1,0 +1,76 @@
+<!-- 
+    <input type = "email"> 
+
+    -espera que o usuario digite um e-mail 
+    -irá validar se o valor digitado é um e-mail 
+    -O estilo da apresentação do campo depende do user agent 
+
+    Atributos
+
+        -minlength / maxlength -> numero minimo e maximo de caracteres
+        -size -> o numero de caracteres aceitaveis 
+        -pattern ->
+            -expressão regular para validar o que está sendo digitado no campo
+            -altamente recomendado o uso de um padrão de segurança altas em senhas
+            -Exemplo : queremos que a senha contenha caracteres hexadecimais com limite de min 4 e max 8
+                * pattern=".+@rocketseat\.com\.br"
+        
+        -placeholder -> mostra um exemplo de texto a ser digitadono campo
+        -readonly / disabled -> atributo indicando se o campo esta habilitado ou não
+        -required -> o campo será obrigatorio
+        -multiple -> o campo irá receber 1 ou mais emails, separada por virgulas. 
+        
+        -list ->
+          - O id de uma tag <datalist> que esta no mesmo documento
+          -<datalist> irá contar uma lsita de valores pre definidos a fim de sugerir ao usuario 
+            quais valores estão disponiveis 
+          -Os valores do <datalist> que não forem compativeis com o campo não serão apresentados
+            como sugestão
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT-Email</title>
+  </head>
+  <body>
+    <form id="meu-form" action="">
+      <legend>e-mail</legend>
+      <fieldset>
+        <input
+          type="email"
+          placeholder="e-mail"
+          multiple
+          minlength="20"
+          maxlength="30"
+          size="100"
+        />
+        <br />
+        <input
+          type="email"
+          placeholder="e-mail"
+          value="donny.rivera@gmail.com"
+          disabled
+        />
+        <br />
+        <datalist id="emailslist">
+          <option>donny.rivera@gmail.com</option>
+          <option>donny_rivera@hotmail.com</option>
+          <option>josany.rivera@gmail.com</option>
+          <option>josanylacerda@gmail.com</option>
+          <option>donny.rivera@rocketseat.com.br</option>
+        </datalist>
+        <input
+          type="email"
+          list="emailslist"
+          pattern=".+@rocketseat\.com\.br"
+          title="Somente e-mails @rocketseat.com.br serão aceitos"
+        />
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

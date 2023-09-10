@@ -1,0 +1,19 @@
+div{
+
+    background-color: blue;
+}
+h1{
+    color: #4410B8;
+}
+h2{
+    color: rgb(249,221,74)
+}
+h3{
+    color: hsl(37.9,83.6%,68.8%);
+}
+span{
+    color: yellow;
+}
+h4{
+    color: inherit;
+}

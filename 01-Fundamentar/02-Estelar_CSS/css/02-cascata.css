@@ -1,0 +1,45 @@
+@import url("http://local.com/style.css");
+@media (min-width: 500px){
+    /* rules here  */
+}
+@font-face {
+    font-family: Arial;
+    src: url(./01-introducao.css);
+}
+@keyframes nameofanimation {
+    /* rules here */
+}
+/*Selector Universal = 0 */
+* {
+    color: greenyellow;
+}
+
+/*Seletor de Elemento = 1 */
+h1{
+    color: red !important; 
+    /* !important -> Quebra o fluxo da cascata, maior prioridade */
+}
+h1{
+    color: blue;
+}
+
+/*Selector de classe ou atributo = 10*/
+.titles {
+    color: orange;
+}
+
+/*Seletor de ID = 100*/
+#my-title {
+    color: red;
+}
+#my-text strong {
+    color: aqua;
+}
+/*Seletor Inline = 1000
+codigo esta no fonte HTML tag <h2>*/
+
+/*Mix de pesos*/
+h1.titles#my-title {
+    color: fuchsia;
+}
+

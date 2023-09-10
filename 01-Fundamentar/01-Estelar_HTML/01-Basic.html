@@ -1,0 +1,110 @@
+<!-- Comentarios 
+Hypertext Markup Text
+-->
+
+<!-- 
+    Anatomia das Tags 
+        - Abertura de tag
+        - Fechamento de tag 
+        - Conteudo 
+        - Elementos
+-->
+<h1>Title</h1>
+
+<!--Elementos Vazios sem fechamento de tag-->
+<img src="" alt="">
+<input type="text"> <br>
+
+<!--
+    Atributos HTML
+        - Informações Extras
+        - Configurações
+-->
+<input type="text" disabled> <br>
+<img src="./Exercicios/Files/sekiro02.jpg" alt="Ninja com espada na mao direita e na mão esquerda um fogo">
+
+<!--
+    Aspas 
+        - Omissao (Não deixar de usar aspas)
+        - Simples (Se necessario usar dentro de aspas duplas)
+        - Duplas (Utilizar apenas aspas duplas)
+-->
+<br>
+<a href="http://google.com" target="">link na pagina</a>
+
+<!--
+    Atributos Globais mais Utilizados
+        - class (Agrupar conteudo para utilizar ccs ou javascript)
+        - contenteditable (conteudo pode ser alterado)
+        - data-* (pode informar qualquer nome após data- para usar no css e javascript)
+        - hidden (sumir com a tag)
+        - id (para poder especificar apenas um atributo especifico sem haver outro igual)
+        - style (aplicar estilização direto do css direto na tag)
+        - tabindex (define o movimento do tab nas paginas)
+        - title (define um texto quando o mouse estiver em cima da tag)
+-->
+<div class="carrinho" contenteditable="true" id="cart1" tabindex="1" style="color: red;">conteudo</div>
+<div class="carrinho" data-id="" id="cart2" tabindex="2" style="color: green;">conteudo</div>
+<div title="passe o mouse aqui" tabindex="3">conteudo</div>
+<div class="carrinho" id="cart3" hidden>conteudo</div>
+
+<!--
+    Aninhamento de tags 
+        - Fluxo
+        - Hierarquia
+        - Posicionamento
+            - tags em linha 
+            - tags em bloco
+-->
+<div>
+    <p>
+        <a href="https://google.com"> Pagina do Google </a> <br> 
+        Vou <em>escrever um paragrafo ainda se eu tiver um texto aqui </em> 
+    </p>
+    <p>
+        Esse é um novo paragrafo
+    </p>
+</div>
+
+<!--
+  Conteudo do Texto e Caracteres reservados
+-->
+<p>
+    <code>br </code> Quebra de Linha <br>
+    <code>nbsp </code> &nbsp; Caracter especial para espaço no html <br>
+    <code>lt </code> &lt; Sinal de menor <br>
+    <code>gt </code>&gt; Sinal de maior <br>
+    <code>amp </code>&amp; Sinal do & comercial <br>
+    <code>quot </code>&quot; Sinal de aspas duplas &quot; <br>
+    <code>apos </code>&apos; Sinal de aspas simples &apos; <br>
+  </p>
+  
+  <!-- Anatomia do Documento Html -->
+  <!DOCTYPE html>
+  <html lang="en">
+    <!-- Configuraçoes da pagina como titulo -->
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Titulo da pagina</title>
+    </head>
+    <!-- O que será visualizado na pagina-->
+    <body>
+      <h1>Titulo do Texto</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, reprehenderit? Culpa dolores
+        illo deleniti iste. Quibusdam rem debitis similique, cumque doloribus eum officiis consectetur
+        iusto eligendi fugiat. Eos, amet provident? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Et pariatur similique ea beatae vel aperiam libero facilis maxime laudantium. Beatae,
+        natus a consequatur rem fugit autem consectetur explicabo cumque sint!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et pariatur similique ea beatae vel
+        aperiam libero facilis maxime laudantium. Beatae, natus a consequatur rem fugit autem
+        consectetur explicabo cumque sint! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Est, reprehenderit? Culpa dolores illo deleniti iste. Quibusdam rem debitis similique, cumque
+        doloribus eum officiis consectetur iusto eligendi fugiat. Eos, amet provident?
+      </p>
+    </body>
+  </html>
+  
