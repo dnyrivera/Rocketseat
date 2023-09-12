@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-rows: repeat(3, 100px); */
+	gap: 10px;
+
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+
+	/* Alinhamento eixo Y (cima e baixo) */
+	/* 
+    align-content: space-evenly;  
+    align-items: center;
+    */
+
+	/* Alinhamento eixo X (esquerda e direita) */
+	/* 
+    justify-content: space-evenly; 
+    justify-items: center;
+    */
+
+	/* Junção dos Align e Justify */
+	/* 
+    place-content: space-evenly; 
+	place-items: center;
+    */
+}
+
+.grid > div {
+	background-color: cornflowerblue;
+}
+
+.grid div:nth-child(2) {
+	/* 
+    align-self: end;
+    justify-self: center; 
+*/
+	place-self: center;
+}

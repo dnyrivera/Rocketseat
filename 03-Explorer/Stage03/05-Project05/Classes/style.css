@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#app {
+	display: grid;
+	font-size: 2rem;
+	/* grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr); */
+
+	/* PRIMEIRO LAYOUT */
+	/* grid-template-areas:
+		"header header header"
+		"main main aside"
+		"footer footer footer"; */
+
+	/* SEGUNDO LAYOUT */
+	/* grid-template-areas:
+		"header main main"
+		"header main main"
+		"header aside footer"; */
+
+	/* SHORTHAND TEMPLATE */
+	grid-template:
+		"header main main" 80px
+		"header main main" 40px
+		"header aside footer" 50px / 80px 1fr 2fr;
+
+	/* Espaços entre os grid-template-areas */
+	/* column-gap: 35px;
+	row-gap: 25px; */
+	gap: 25px;
+	padding: 30px;
+	box-sizing: border-box;
+
+	height: 100vh;
+}
+
+/* PRIMEIRO LAYOUT - grid-columns */
+
+/* #app header {
+	background-color: red;
+	grid-column: 1 / 4;
+}
+
+#app main {
+	background-color: green;
+	grid-column: 1 / 3;
+}
+
+#app aside {
+	background-color: blue;
+}
+
+/* #app footer {
+	background-color: yellow;
+	grid-column: 1 / 4;
+} */
+
+/* SEGUNDO LAYOUT - grid-rows*/
+
+/* #app header {
+	background-color: red;
+	grid-row: 1 / 4;
+}
+
+#app main {
+	background-color: green;
+	grid-column: 2 / 4;
+	grid-row: 1 / 3;
+}
+
+#app aside {
+	background-color: blue;
+}
+
+#app footer {
+	background-color: yellow;
+}  */
+
+/* TERCEIRO LAYOUT - grid-areas */
+#app header {
+	background-color: red;
+	/* grid-area: A; */
+	grid-area: header;
+}
+
+#app main {
+	background-color: green;
+	grid-area: main;
+}
+
+#app aside {
+	background-color: blue;
+	/* grid-area: aside; */
+}
+
+#app footer {
+	background-color: yellow;
+	grid-area: footer;
+}
+
+/* Teste para saber se tudo esta funcionando */
