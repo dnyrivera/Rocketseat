@@ -1,0 +1,222 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+
+	--hue: 225;
+	--color-base-white: hsl(0, 0%, 100%);
+	--color-base-gray-100: hsl(0, 0%, 96%);
+	--color-base-gray-300: hsl(var(--hue), 60%, 58%);
+	--color-base-gray-500: hsl(0, 0%, 24%);
+	--color-base-gray-900: hsl(var(--hue), 60%, 30%);
+}
+
+html,
+body,
+input {
+	font-family: "Mulish", sans-serif;
+}
+
+body {
+	color: var(--color-base-gray-900);
+	font-size: 1.6rem;
+
+	background-color: var(--color-base-white);
+}
+
+#app {
+	display: grid;
+	grid-template-rows: max-content 1fr max-content;
+
+	height: 100vh;
+}
+
+.container {
+	padding: 1.6rem 3.2rem;
+	/* 
+		Pega a largura da página e para de crescer
+		e centraliza as informações 
+	*/
+	width: min(112rem, 100%);
+	margin: 0 auto;
+}
+
+main {
+	/* Criar um scroll somente no meio da pagina */
+	overflow-y: scroll;
+	background-color: var(--color-base-gray-100);
+}
+
+header,
+nav,
+nav ul {
+	font-weight: 700;
+
+	display: flex;
+	align-items: center;
+	gap: 7.2rem;
+}
+
+header form {
+	flex: 1;
+}
+
+nav ul {
+	list-style: none;
+	font-size: 1.8rem;
+	color: var(--color-base-gray-300);
+}
+
+ul li.active {
+	color: var(--color-base-gray-900);
+}
+
+.input-wrapper label {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+}
+
+.input-wrapper input {
+	font-size: 1.6rem;
+	font-weight: 600;
+
+	width: 100%;
+	background-color: var(--color-base-gray-100);
+
+	border: 0;
+	border-radius: 0.6rem;
+
+	padding: 1.6rem;
+}
+
+.input-wrapper input::placeholder {
+	color: var(--color-base-gray-500);
+	opacity: 0.56;
+}
+
+.avatar {
+	width: 6rem;
+	height: 6rem;
+	/* Propriedade para ajuste da foto */
+	object-fit: cover;
+
+	border-radius: 50%;
+}
+
+/* Galeria Format*/
+main h1 {
+	font-size: 2.4rem;
+	padding-top: 1.6rem;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.2rem;
+
+	margin-top: 3.2rem;
+}
+
+.item {
+	background-color: var(--color-base-white);
+	border-radius: 0.8rem;
+	overflow: hidden;
+}
+
+.item img {
+	width: 100%;
+	/* proporção da imagem */
+	aspect-ratio: 16/9;
+	object-fit: cover;
+	display: block;
+
+	/* Deixar as imagens preto e branco */
+	/* filter: grayscale(1); */
+
+	/* 
+	transition-property: all;
+	transition-duration: 300ms;
+	transition-delay: 1s;
+	transition-timing-function: ease-out; */
+
+	transition: all 200ms ease-out;
+}
+
+.item img:hover {
+	filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+	transform: scale(2.1) rotate(-25deg);
+}
+
+.details {
+	padding: 2.2rem;
+	background-color: var(--color-base-white);
+	z-index: 1;
+	position: relative;
+}
+
+.details h2 {
+	font-size: 1.8rem;
+}
+
+.tags {
+	margin-top: 1.2rem;
+}
+
+.tags span {
+	font-size: 1.2rem;
+	line-height: 0;
+	text-transform: uppercase;
+
+	background-color: var(--color-base-gray-100);
+	border-radius: 0.4rem;
+
+	padding: 0.6rem;
+}
+
+footer {
+	font-weight: 600;
+	text-align: center;
+
+	padding: 1.6rem;
+
+	--startY: 100%;
+	animation-name: move;
+	animation-duration: 1s;
+}
+
+header {
+	--startY: -100%;
+	animation-name: move;
+	animation-duration: 1s;
+}
+
+@keyframes move {
+	from {
+		transform: translateY(var(--startY));
+	}
+
+	to {
+	}
+}
+
+.item {
+	--delay: 0.4s;
+	animation: appear 0.4s var(--delay) backwards;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+}

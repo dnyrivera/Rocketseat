@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	background-color: mediumpurple;
+}
+
+.square {
+    /* display: grid;
+    align-items: center; */
+    padding-top: 25px;
+	text-align: center;
+	width: 4rem;
+	height: 4rem;
+	background-color: yellow;
+	opacity: 0.6;
+
+	animation-name: move, blink;
+	animation-duration: 1s, 2s;
+	animation-fill-mode: forwards;
+	/* animation-direction: reverse; */
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	/* animation-delay: 50ms; */
+	animation-timing-function: ease-in-out;
+
+	/* Shorthand Animation */
+	/* 
+      animation: move 1s forwards alternate infinite,
+      blink 100ms infinite;
+     */
+}
+
+.square:hover {
+	animation-play-state: paused;
+}
+
+@keyframes move {
+	/* Ponto inicial da animação */
+	0% {
+	}
+	/* Ponto Final da animação */
+	100% {
+		transform: translateX(calc(100vw - 100% - 16px));
+	}
+}
+
+@keyframes blink {
+	0%,
+	100% {
+		opacity: 0.1;
+	}
+	50% {
+		opacity: 1;
+	}
+}
