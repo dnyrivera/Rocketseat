@@ -1,36 +1,41 @@
 // Control Flow (if / else)_________________________________________
-
-let temperature = 35;
+console.log("IF / ELSE".toUpperCase());
+let temperature = 38;
 let highTemperature = temperature > 37.5;
 let mediumTemperature = temperature >= 37 && temperature <= 37.5;
 
 if (highTemperature) {
-	console.log("Febre Alta");
+	console.log("Temp:", temperature, "Febre Alta");
 } else if (mediumTemperature) {
-	console.log("Febre Moderada");
+	console.log("Temp:", temperature, "Febre Moderada");
 } else {
-	console.log("Saudável");
+	console.log("Temp:", temperature, "Saudável");
 }
+console.log("");
 
 // Switch __________________________________________________________
+console.log("Switch".toUpperCase());
 
 let expression = "a";
 
 switch (expression) {
 	case "a":
-		console.log("a");
+		console.log("Value: a");
 		break; // stop the flow
 	case "b":
-		console.log("b");
+		console.log("Value: b");
 		break;
 	default:
-		console.log("default");
+		console.log("Value: default");
 		break;
 }
+console.log("");
 
-// create a calculator
+// create a calculator _________________________________________
+console.log("Calculator Exercise".toUpperCase());
+
 function calculator(number_one, operator, number_two) {
-	let result;
+	let result = 0;
 
 	switch (operator) {
 		case "+":
@@ -52,13 +57,14 @@ function calculator(number_one, operator, number_two) {
 
 	return result;
 }
-
-console.log(`\nAddiction: ${calculator(13, "+", 07)}`);
-console.log(`Subtraction: ${calculator(13, "-", 07)}`);
-console.log(`Multiplication: ${calculator(13, "*", 07)}`);
-console.log(`Division: ${calculator(13, "/", 07).toFixed(2)}`);
+console.log(`Addiction: ${calculator(13, "+", 7)}`);
+console.log(`Subtraction: ${calculator(13, "-", 7)}`);
+console.log(`Multiplication: ${calculator(13, "*", 7)}`);
+console.log(`Division: ${calculator(13, "/", 7).toFixed(2)}`);
+console.log("");
 
 // Throw / Try / Catch __________________________________________________
+console.log("Throw / Try / Catch".toUpperCase());
 
 function sayName(name = "") {
 	if (name === "") {
@@ -71,7 +77,6 @@ function sayName(name = "") {
 try {
 	sayName();
 } catch (e) {
-	console.log("\nError:", e);
+	console.log("Error:", e);
 }
-
-console.log("after error");
+console.log("After Error Message");

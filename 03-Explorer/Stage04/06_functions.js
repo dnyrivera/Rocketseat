@@ -1,3 +1,5 @@
+console.log("Functions Class ------------------".toUpperCase());
+
 // Function statement
 function createPhrases() {
 	console.log("Estudar é muito bom");
@@ -7,10 +9,11 @@ function createPhrases() {
 
 // execute, run, call, invoke function
 createPhrases();
+console.log("");
 
-console.log("Game over!");
-
-// Function in Variables (Function expression / anonymous)________
+console.log(
+	"Function in Variables (Function expression / anonymous) ------------------".toUpperCase()
+);
 
 //parameters
 const sum = function (number1, number2) {
@@ -23,21 +26,25 @@ let number2 = 25;
 
 sum(number1, number2); //arguments
 
-console.log(`\nO numero 1 é ${number1}`);
+console.log(`O numero 1 é ${number1}`);
 console.log(`O numero 2 é ${number2}`);
 console.log(`A soma é ${sum(number1, number2)}`);
-// console.log(`Total: ${total}`)
+// console.log(`Total: ${total}`) // sem palavra chave na função o valor é enviado para toda a aplicação
+console.log("");
 
+console.log(
+	"Other Way to Explaining Functions ------------------".toUpperCase()
+);
 // Function is a blender
 function makeJuice(fruit_one, fruit_two) {
 	let juice = fruit_one + " and " + fruit_two;
 	return juice;
 }
-
 const cup = makeJuice("raspberry", "lime");
-console.log(`\nThe juice is ${cup}`);
+console.log(`The juice is ${cup}`);
+console.log("");
 
-//Function Scope___________________________________________________
+console.log("Function Scope ------------------".toUpperCase());
 let subject = "create video";
 
 function createThink(subject) {
@@ -45,37 +52,38 @@ function createThink(subject) {
 	return new_subject;
 }
 
-console.log("\n" + subject);
+console.log(subject);
 console.log(createThink(subject));
+console.log("");
 
-// Function Hoisting_______________________________________________
+console.log("Function Hoisting ------------------".toUpperCase());
 sayMyName();
 
+function sayMyName() {
+	console.log("Function Hoisting: Donny");
+}
+console.log("");
 //Function expression doesn't work the hoisting
 // const sayMyName = function sayMyName() {
 // 	console.log("Rivera");
 // };
 
-function sayMyName() {
-	console.log("\nFunction Hoisting: Donny");
-}
+console.log("Arrow Function ------------------".toUpperCase());
 
-// Arrow Function ________________________________________________
-// No arguments
 const myName = () => {
-	console.log("\nArrow Function (no argument): Donny");
+	console.log("Arrow Function (no argument): Donny");
 };
 
 const myName2 = (name) => {
 	console.log(`Arrow Function (argument): ${name}`);
 };
-
 myName();
 myName2("Rivera");
+console.log("");
 
-// Callback Function _____________________________________________
+console.log("Callback Function ------------------".toUpperCase());
 function fullName(name) {
-	console.log("\nbefore the function callback");
+	console.log("before the function callback");
 	// like this :
 	// function name() {
 	//     console.log("iniciando uma function callback")
@@ -88,8 +96,9 @@ function fullName(name) {
 fullName(() => {
 	console.log("iniciando uma function callback");
 });
+console.log("");
 
-//Function Constructor __________________________________________
+console.log("Constructors Function ------------------".toUpperCase());
 /*
  * new expression
  * Use to create a new object
@@ -105,7 +114,7 @@ function Person(name) {
 
 const donny = new Person("Donny");
 const josany = new Person("Josany");
-console.log("\n", donny);
+console.log(donny);
 console.log(donny.walk());
 console.log(josany);
 console.log(josany.walk());
