@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>STAGE06-SPA</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/" onclick="route()">Home</a>
+			<a href="/about" onclick="route()">About</a>
+			<a href="/contact" onclick="route()">Contact</a>
+			<a href="/404" onclick="route()">404</a>
+		</nav>
+
+		<div class="app"></div>
+
+		<script>
+			//Criar objeto das rotas x paginas
+			const routes = {
+				"/": "/pages/home.html",
+				"/about": "/pages/about.html",
+				"/contact": "/pages/contact.html",
+				404: "/pages/error404.html",
+			};
+
+			function route(event) {
+				event = event || window.event;
+				// Evite o funcionamento padrão
+				event.preventDefault();
+
+				// Pegar o caminho do path quando clicar no link
+				window.history.pushState({}, "", event.target.href);
+
+				handle();
+			}
+
+			function handle() {
+				// Primeira maneira de pegar o pathname
+				//const pathname = window.location.pathname;
+				// Segunda maneira de pegar o pathname
+				const { pathname } = window.location;
+				// Pegar o  valor do routes
+				const route = routes[pathname] || routes[404];
+
+				console.log("Route:", route);
+				console.log("antes de chamar a função assíncrona");
+
+				fetch(route)
+					.then((data) => data.text())
+					.then((html) => console.log(html));
+
+				console.log("Pathname:", pathname);
+			}
+		</script>
+	</body>
+</html>
