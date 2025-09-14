@@ -8,6 +8,6 @@
 		"editor.fontSize": 13,
 		"workbench.colorTheme": "Kite Darker",
 		"editor.formatOnSave": true,
-		"editor.minimap.autohide": true
+		"editor.minimap.autohide": "mouseover"
 	}
 }
